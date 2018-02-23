@@ -1,0 +1,34 @@
+<!-- <sm-tabs>
+  <sm-tab title="Inventory">
+  </sm-tab>
+  <sm-tab title="Product">textsss..</sm-tab>
+</sm-tabs> -->
+
+<div class="main-tabs">
+
+  <div class="ui pointing menu">
+    <a class="item active" data-tab="inventory-tab">
+      Inventory
+    </a>
+    <!-- <a class="item" data-tab="product-tab">
+      Product
+    </a> -->
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search ...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui segment active" data-tab="inventory-tab">
+    <app-inventory></app-inventory>
+  </div>
+
+  <!-- <div class="ui segment" data-tab="product-tab">
+    <p>Product tab</p>
+  </div> -->
+
+</div>

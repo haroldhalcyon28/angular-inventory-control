@@ -1,0 +1,42 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.inventory-table {
+    margin-top: 7vh;
+    width: 90%;
+    margin: auto;
+    font-size: 1.8vh;
+    font-family: ubuntu
+}
+
+i.icon {
+    font-size: 1.8vh;
+    color: grey
+}
+
+.ui.label {
+    font-size: 1.5vh;
+    color: rgb(112, 109, 109)
+}
+
+.ui.label>.icon {
+    margin-right: 3px;
+}
+
+.unseen-row {
+    background-color: rgba(243, 243, 243, 0.808)
+}
+
+.inventory-table .ui.menu {
+    min-height: 2.457143em;
+}
+
+.inventory-table .ui.menu a {
+    padding: .5vh .7vw;
+}
+
+.inventory-table .ui.small.button {
+  font-size: 1.2vh;
+}

@@ -1,0 +1,51 @@
+<div class="ui container">
+
+  <div class="details ui segment" >
+    <h2 class="ui header">
+      <span>BARCODE ID</span>
+      <br> {{inventory.product.barcode_id}}</h2>
+    <div class="ui stackable grid">
+      <div class="five wide column">
+        <b>Name</b>
+        <p>{{inventory.product.item_name}}</p>
+      </div>
+      <div class="five wide column">
+        <b>Price</b>
+        <p>{{inventory.product.price}}</p>
+      </div>
+      <div class="five wide column">
+        <b>Quantity</b>
+        <p>{{inventory.qty}}</p>
+      </div>
+      <div class="five wide column">
+        <b>Unit</b>
+        <p>{{inventory.unit}}</p>
+      </div>
+      <div class="five wide column">
+        <b>Date</b>
+        <p>{{inventory.createdAt | date:'MMM d, y, h:mm a' }}</p>
+      </div>
+      <div class="twelve wide column">
+        <b>Description</b>
+        <p>{{inventory.product.description}}</p>
+        <p *ngIf="!inventory.product.description">( NONE )</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment ui segment">
+    <h3>Comment</h3>
+    <div *ngIf="inventory.comment">
+      <p>{{inventory.comment.msg}}</p>
+      <p *ngIf="!inventory.comment.msg">( NONE )</p>
+    </div>
+  </div>
+
+  <div class="photos ui segment">
+    <h3>Photos</h3>
+    <p *ngIf="inventory.photos.length < 1">( NONE )</p>
+    <div *ngFor="let photo of inventory.photos" class="img-div">
+      <img class="ui medium bordered rounded medium image"  [src]="photo.path">
+    </div>
+
+  </div>

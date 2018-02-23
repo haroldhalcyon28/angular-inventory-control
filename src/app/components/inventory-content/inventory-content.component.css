@@ -1,0 +1,65 @@
+.container {
+    margin-top: 5vh;
+    font-size: 2vh
+}
+
+.details h2 {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 2vh;
+    letter-spacing: 3px;
+    color: teal;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.568);
+}
+
+.details h2 span {
+    font-size: 1.4vh;
+    color: rgb(90, 90, 90);
+    letter-spacing: 1px;
+}
+
+.details .stackable {
+    margin-top: 2vh;
+    font-size: 1.8vh;
+    font-family: ubuntu;
+    color: rgb(90, 90, 90)
+}
+
+.container .comment h3,
+.container .comment p {
+    font-size: 1.8vh;
+    font-family: ubuntu;
+    color: rgb(90, 90, 90)
+}
+
+.container .photos h3 {
+    font-family: ubuntu;
+    color: rgb(90, 90, 90)
+}
+
+.container div.photos {
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.container div.photos .img-div {
+    display: inline-block;
+    padding-right: 1vw;
+    width: 15%;
+}
+
+.details,
+.comment,
+.photos {
+    padding: 3vh 3vw;
+    margin-bottom: 2vh;
+}
+
+
+/* .container div.photos .img-div img {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+} */

@@ -1,0 +1,76 @@
+<div class="inventory-table">
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Barcode ID</th>
+        <th>Item Name</th>
+        <th>Qty</th>
+        <th>Unit</th>
+        <th>Issues</th>
+        <th>Date</th>
+        <th></th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let i of inventoryInfo" [ngClass]="{'unseen-row': !i.seen}">
+        <td>{{ i.product.barcode_id }}</td>
+        <td>{{ i.product.item_name }}</td>
+        <td>{{ i.qty }}</td>
+        <td>{{ i.unit }}</td>
+        <td class="center">
+          <div class="ui compact menu" *ngIf="i.photos?.length > 0 || i.comment.msg ">
+            <a class="item" *ngIf="i.photos?.length > 0">
+              <i class="file image outline icon"> </i>
+              {{i.photos.length}}
+            </a>
+
+            <a class="item"  *ngIf="i.comment.msg">
+              <i class="comment outline icon"> </i>
+              <div class="floating ui red label" *ngIf="!i.comment.seen">new</div>
+            </a>
+          </div>
+        </td>
+        <td>{{ i.createdAt | date:'MMM d, y, h:mm a'}}</td>
+        <td>
+          <button class="ui teal button mini details" routerLink="/inventory/{{i._id}}"> Details </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--
+<button id="clicker">
+  click
+</button> -->
+
+
+
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="http://res.cloudinary.com/dtygz6jv9/image/upload/t_media_lib_thumb/sample.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the
+        <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
